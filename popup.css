@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#container{
+    font-family: 'Poppins', sans-serif;
+    width: 10rem;
+    height: auto;
+    display: grid;
+    grid-template-rows: 1fr 1fr 0.5fr;
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer";
+    background: linear-gradient(to bottom, #c02425, #f0cb35);
+}
+
+#header, #main, #footer, #header > #logo, #current-price{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* Header section */
+#header{
+    justify-content: space-around;
+    padding: 1rem 0;
+    grid-area: "header";
+}
+
+#header > #logo > h2{
+    font-size: 1.7rem;
+    color: #fff
+}
+
+#header > #switch-input{
+    position: relative;
+    width: 2.7rem;
+    height: 1.3rem;
+    background-color: rgb(233, 233, 233);
+    appearance: none;
+    border-radius: 2rem;
+    transition: 0.3s;
+}
+
+#header > #switch-input:checked{
+    background-color: #f0cb35;
+}
+
+#header > #switch-input::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1.3rem;
+    height: 1.3rem;
+    transform: scale(1.1);
+    background-color: #fff;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+#header > #switch-input:checked:before{
+    left: 1.35rem;
+}
+
+/* Main Section */
+
+#main{
+    flex-direction: column;
+    gap: .5rem;
+    grid-area: "main";
+}
+
+#dollar-provider, option{
+    font-family: 'Poppins', sans-serif;
+}
+
+#main > #dollar-provider{
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #f0cb35;
+    outline: none;
+    color: #fff;
+}
+
+#dollar-provider option{
+    background-color: #c04824;
+    border: none;
+    outline: none;
+}
+
+#main > #current-price{
+    gap: .3rem;
+}
+
+#main > #current-price > span{
+    color: #fff;
+    font-size: 1.2rem
+}
+
+
+
+

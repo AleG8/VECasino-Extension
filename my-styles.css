@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
+#exchange-container{
+  position: absolute;
+  display: none;
+  /* height: 0;  */
+  z-index: 1000;
+}
+
+#amount-container{
+  display: flex;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.9rem;
+  font-weight: bold;
+  position: relative;
+  width: 100%;
+  height: 1.4rem;
+  padding: 0 0.2rem 0.2rem 0.2rem;
+  background-color: #fff;
+  border-radius: .5rem 0 .5rem .5rem;
+  box-shadow: -0.2rem 0.2rem 0 #c04824,
+  inset 0.04rem 0.04rem .4rem rgba(0, 0, 0, 0.15),
+  inset -0.04rem -0.04rem .4rem rgba(0, 0, 0, 0.15);
+  text-align: center;
+  color: rgb(24, 154, 206);
+  user-select: none;
+  transition: all .5s;
+}
+
+#amount-container > #exit{
+  text-decoration: none;
+  color: #2C3E50;
+  position: absolute;
+  top: -0.9rem;
+  right: -0.4rem;
+  transition: 0.2s;
+}
+
+#amount-container > #exit:hover{
+  background-color: transparent;
+  color: red;
+  transform: scale(1.2) rotate(360deg);
+  cursor: pointer;
+}
+
+#amount-container::after{
+  content: '';
+  position: absolute;
+  bottom: -1.2rem;
+  left: calc(50% - .5rem);
+  border: .55rem solid transparent;
+  border-top-color: #c04824 
+}
+
+#amount-container strong{
+  font-size: 0.8rem;
+  color: #c04824;
+}
+
+#amount-container #icon-arrow{
+  width: .9rem;
+  transition: 0.2s;
+  margin: 0 0.4rem;
+  background-color: transparent;
+  filter: none;
+}
+
+#amount-container #icon-arrow:hover{
+  cursor: pointer;
+  transform: scale(1.2);
+}
+

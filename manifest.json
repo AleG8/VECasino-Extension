@@ -1,0 +1,41 @@
+{
+  "name": "VECasino",
+  "description": "Selecciona la cantidad y obten su intercamio en $",
+  "version": "1.0",
+  "manifest_version": 3,
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "32": "/images/icons/casino-16.png",
+      "48": "/images/icons/casino-32.png",
+      "16": "/images/icons/casino-48.png",
+      "128": "/images/icons/casino-128.png"
+    }
+  },
+  "icons": {
+    "32": "/images/icons/casino-16.png",
+    "48": "/images/icons/casino-32.png",
+    "16": "/images/icons/casino-48.png",
+    "128": "/images/icons/casino-128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "css": ["my-styles.css"],
+      "js": [
+        "/src/tags.js",
+        "/src/fetch-price.js",
+        "/src/content-script.js",
+        "/src/functions.js"
+        
+      ]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [ "images/exchange-arrow.svg", "images/x.png"],
+      "matches": [ "<all_urls>" ]
+    }
+  ],
+  "permissions": ["storage"]
+}
